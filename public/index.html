@@ -7,6 +7,7 @@
 </head>
 <body>
   <div class="jumbotron">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs3sI7IjWtCMvYC3tmGyYtufvd6nLf1caI9BBld5lXGFYvlHc6">
     <h1>bankapp</h1>
   </div>
 
@@ -22,9 +23,9 @@
       </thead>
       <tbody>
         <tr>
-          <td><input type="text" class="form-control" ng-model="account.number"</td>
-          <td><input type="text" class="form-control" ng-model="account.name"</td>
-          <td><input class="form-control" ng-model="account.amount"</td>
+          <td><input type="text" class="form-control" ng-model="account.number"></td>
+          <td><input type="text" class="form-control" ng-model="account.name"></td>
+          <td><input class="form-control" ng-model="account.amount"></td>
           <td><button class="btn btn-primary" ng-click="addAccount()">add account</button></td>
           <td><button class="btn btn-info" ng-click="update()">update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">clear</button></td>
         </tr>
@@ -40,12 +41,20 @@
   </div>
 
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script> <!--remember that greensock has to be loaded before main js file-->
    <script src="controllers/controller.js"></script>
+   <script type="text/javascript" src="controllers/bankapp.js"></script>
    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>  <!--added for the $ jquery function to work, needed below version 3-->
 
 </body>
 </html>
 
+
+<!--<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
+-->
 
 
 
