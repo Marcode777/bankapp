@@ -27,8 +27,12 @@
           <td><button class="btn btn-primary" ng-click="addAccount()">add account</button></td>
           <td><button class="btn btn-info" ng-click="update()">update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">clear</button></td>
         </tr>
-        <tr>
-          
+        <tr ng-repeat="account in bankapp">
+          <td>{{account.number}}</td>          
+          <td>{{account.name}}</td>          
+          <td>{{account.amount}}</td>  
+          <td><button class="btn btn-danger" ng-click="remove(account._id)">remove</button></td>        
+          <td><button class="btn btn-warning" ng-click="edit(account._id)">edit</button></td>        
         </tr>
       </tbody>
     </table>
@@ -38,3 +42,28 @@
    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>  <!--added for the $ jquery function to work, needed below version 3-->
 </body>
 </html>
+
+
+
+
+<!-- ng-app="myApp" initiates Angular;
+ng-controller is for the controller (which communicates with the server, and with the model via server);
+nd-model binds an input or custom form-control to a property on the scope;
+ng-repeat loops through arrays;
+ng-click is for the click event --> 
+<!-- to initiate app ,open additional shell on terminal, initiate mongo, then open another additional shell on terminal, initiate mongod, then initiate node server.js-->
+<!-- Angular Directives: directives attaches event listeners to the HTML to make it interactive
+ng-app directive: initiates the app, it pretty much sets up the app to be able to use other Angular directives, and code; is used to auto-bootstrap an AngularJS application, it designates the root element of the application and is typically placed near the root element on the page.
+ng-model directive: binds an input, select, textarea, or custom form control to a property on the scope; angular uses two-way data-binding, which is basically the automatic synchronization of data between the model and view components; scope is basically the glue between the application controller and the view, for our particular example, our view is the index.html file
+ng-controller directive: attaches a controller class to the view; a key aspect of how Angular supports the principles of the Model-View-Design (MYC) pattern
+ng-repeat directive: instantiates a template once per item from a collection
+ng-click directive: allows you to specify custom behavior when an element is clicked-->
+
+<!-- JSON Example
+{
+"employees":[
+    {"firstName":"John", "lastName":"Doe"}, 
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+]
+}-->
