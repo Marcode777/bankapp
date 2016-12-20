@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-App="myApp">
 <head>
   <title>bankapp</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -17,13 +17,14 @@
           <th>Account Number</th>
           <th>Name</th>
           <th>Amount</th>
+          <th>&nbsp;</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><input type="text" class="form-control" ng-model="account.number"</td>
           <td><input type="text" class="form-control" ng-model="account.name"</td>
-          <td><input type="text" class="form-control" ng-model="account.amount"</td>
+          <td><input class="form-control" ng-model="account.amount"</td>
           <td><button class="btn btn-primary" ng-click="addAccount()">add account</button></td>
           <td><button class="btn btn-info" ng-click="update()">update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">clear</button></td>
         </tr>
@@ -39,7 +40,9 @@
   </div>
 
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+   <script src="controllers/controller.js"></script>
    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>  <!--added for the $ jquery function to work, needed below version 3-->
+
 </body>
 </html>
 

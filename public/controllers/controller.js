@@ -8,16 +8,16 @@ function($scope, $http){
     var refresh = function() {
         $http.get('/bankapp').success(function(response){
           console.log("I got the data I requested in json");
-        $scope.contactbookdb = response;
-        $scope.contact = "";
+        $scope.bankapp = response;
+        $scope.account = "";
       });
     }
 
     refresh();
 
-    $scope.addContact = function(){
-      console.log($scope.contact);
-      $http.post('/bankapp', $scope.contact).success(function(response){
+    $scope.addAccount = function(){
+      console.log($scope.account);
+      $http.post('/bankapp', $scope.account).success(function(response){
         console.log(response);
         refresh();
       })
@@ -33,19 +33,19 @@ function($scope, $http){
     $scope.edit = function(id){
       console.log(id);
       $http.get('/bankapp/' + id).success(function(response){
-        $scope.contact = response;
+        $scope.account = response;
       });
     };
 
     $scope.update = function() {
-      console.log($scope.contact._id);
-      $http.put('/bankapp/' + $scope.contact._id, $scope.contact).success(function(response){
+      console.log($scope.account._id);
+      $http.put('/bankapp/' + $scope.account._id, $scope.account).success(function(response){
         refresh();
       })
     };
 
     $scope.deselect = function() {
-      $scope.contact = "";
+      $scope.account = "";
     }
 
 
@@ -53,8 +53,8 @@ function($scope, $http){
 
 //$scope is the glue between the controller and the view
 //to get data from the server instead of the controller, the protocol $http.get is used
-//'/contactbookdb' is the route created to get data 
-// $scope.contactbookdb = response will place the data into the html 
-// $scope.addContact=function() sends data from the input boxes on the html file and then via the $http.post request, is sent to the server to be processed into the database, but the new data won't show on the view, just yet
+//'/bankapp' is the route created to get data 
+// $scope.bankapp = response will place the data into the html 
+// $scope.addAccount=function() sends data from the input boxes on the html file and then via the $http.post request, is sent to the server to be processed into the database, but the new data won't show on the view, just yet
 // to make the new data show on the view, the page has to be refreshed, so a new function called refresh(); is created
 // so on and so forth with the rest of the http protocol requests 
