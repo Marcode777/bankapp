@@ -5,3 +5,7 @@
 #about {padding-top:50px;height:425px;color: black; background-color: white; border: 2px solid gray; border-radius: 5px}
 #services {padding-top:50px;height:500px;color: #fff; background-color: #b3d9ff;border: 2px solid gray; border-radius: 5px}
 #questions {padding-top:50px;height:500px;color: #fff; background-color: white;border: 2px solid gray; border-radius: 5px}
+
+p{
+  color:black;
+}
