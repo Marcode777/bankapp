@@ -5,7 +5,10 @@
 #about {padding-top:50px;height:425px;color: black; background-color: white; border: 2px solid gray; border-radius: 5px}
 #services {padding-top:50px;height:500px;color: #fff; background-color: #b3d9ff;border: 2px solid gray; border-radius: 5px}
 #questions {padding-top:50px;height:500px;color: #fff; background-color: white;border: 2px solid gray; border-radius: 5px}
+#login {padding-top:50px;height:500px;color: #fff; background-color: #66ff66;border: 2px solid gray; border-radius: 5px}
+#register {padding-top:50px;height:500px;color: #fff; background-color: #33ff33;border: 2px solid gray; border-radius: 5px}
 
 p{
   color:black;
 }
+
