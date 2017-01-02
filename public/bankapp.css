@@ -12,3 +12,11 @@ p{
   color:black;
 }
 
+.navbar{
+  background-color: #1aff1a;
+}
+
+.nav.navbar-nav li a{
+  color:white;
+}
+
