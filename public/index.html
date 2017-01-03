@@ -6,28 +6,29 @@
   <link rel="stylesheet" type="text/css" href="bankapp.css">
 </head>
 <body>
-  <div class="jumbotron">
+  <div class="jumbotron" id="top">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs3sI7IjWtCMvYC3tmGyYtufvd6nLf1caI9BBld5lXGFYvlHc6">
     <h1>bankapp</h1>
   </div>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a class="top-links"href="#about">About</a></li>
-            <li><a class="top-links"href="#services">Services</a></li>
-            <li><a class="top-links"href="#questions">Questions</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a class="top-links"href="#login">Login</a></li>
-            <li><a class="top-links"href="#register">Register</a></li>
-          </ul>
+  
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a class="top-links"href="#about">About</a></li>
+              <li><a class="top-links"href="#services">Services</a></li>
+              <li><a class="top-links"href="#questions">Questions</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a class="top-links"href="#login">Login</a></li>
+              <li><a class="top-links"href="#register">Register</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>    <!--this needs to be further worked on-->
+    </nav>    <!--this needs to be further worked on-->
 
   <div class="container" ng-controller="AppCtrl">
     <table>
@@ -75,6 +76,7 @@
       <option value="#about">About</option>
       <option value="#services">Services</option>
       <option value="#questions">Questions</option>
+      <option value="#top">Top</option>
      </select>
   </div>
   <div id="register">
