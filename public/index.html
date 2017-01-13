@@ -7,13 +7,51 @@
   <link rel="stylesheet" type="text/css" href="bankapp.css">
 </head>
 <body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+          <li><a class="top-links"href="#about">About</a></li>
+          <li><a class="top-links"href="#services">Services</a></li>
+          <li><a class="top-links"href="#questions">Questions</a></li>
+          <li><a class="top-links"href="#accounts">Accounts</a></li>
+      </button>
+      <a href="#" class="pull-left"><img  height="55px" width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Toronto-Dominion_Bank_logo.svg/2000px-Toronto-Dominion_Bank_logo.svg.png"></a>
+    </div>
+    <!-- nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a class="top-links"href="#about">About</a></li>
+        <li><a class="top-links"href="#services">Services</a></li>
+        <li><a class="top-links"href="#questions">Questions</a></li>
+        <li><a class="top-links"href="#accounts">Accounts</a></li>
+      </ul>
+    
+      <ul class="nav navbar-nav navbar-right">
+         <li><a class="top-links"href="#login">Login</a></li>
+         <li><a class="top-links"href="#register">Register</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
   <div class="jumbotron" id="top">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs3sI7IjWtCMvYC3tmGyYtufvd6nLf1caI9BBld5lXGFYvlHc6">
     <h1>bankapp</h1>
   </div>
 
+
+
+
+
+
   
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
       <a href="#" class="pull-left"><img  height="55px" width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Toronto-Dominion_Bank_logo.svg/2000px-Toronto-Dominion_Bank_logo.svg.png"></a>
       <div class="container-fluid">
         <div>
@@ -31,7 +69,7 @@
           </div>
         </div>
       </div>
-    </nav>    <!--this needs to be further worked on-->
+    </nav>    <!--this needs to be further worked on -->
 
   <div id="accounts" ng-controller="AppCtrl">
     <table>
