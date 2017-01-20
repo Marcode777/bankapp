@@ -21,7 +21,7 @@ app.get('/bankapp', function(req, res){
 
 app.post('/bankapp', function(req, res){
     console.log(req.body);
-    db.bankapp.insert(req.body, function(err, doc){
+    db.bankapp.insert(req.body, function(err, doc){ //the bankapp that is mentioned here is the collection bankapp, not the database bankapp
         res.json(doc);
     })
 })
