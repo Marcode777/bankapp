@@ -1,8 +1,8 @@
-var express = require('express');
+var express = require('express'); //express is the Node framework. 
 var app = express();
-var mongojs = require('mongojs');
+var mongojs = require('mongojs'); ////mongoose (or mongojs), is the ORM we will use to communicate with our MongoDB database. 
 var db = mongojs('bankapp', ['bankapp']);
-var bodyParser = require('body-parser');
+var bodyParser = require('body-parser');////body-parser will let us pull POST content from our HTTP request so that we can do things like create a bear.
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true})); //this is a new addition
