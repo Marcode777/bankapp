@@ -1,4 +1,4 @@
-TweenMax.from("h1", 1.5, {x:-600, ease:Back.easeOut});
+TweenMax.from("h1", 2.0, {x:-600, ease:Back.easeOut});
 
 // function validateForm(){
 //   var x = document.forms["myForm"]["fname"].value;
