@@ -26,6 +26,18 @@ app.post('/bankapp', function(req, res){
     })
 })
 
+app.post('/register', function (req, res) { // this is for user registration
+        var email = req.body.name;
+        var password= req.body.email;
+        db.users.insert(email,password,  function(err, req){
+      res.redirect('/register');
+  });
+});
+
+
+
+
+
 app.delete('/bankapp/:id', function(req, res){
     var id = req.params.id;
     console.log(id);
@@ -41,6 +53,8 @@ app.get('/bankapp/:id', function(req, res){
         res.json(doc);
     });
 });
+
+
 
 app.put('/bankapp/:id', function(req, res){
     var id = req.params.id;
