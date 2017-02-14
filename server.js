@@ -30,8 +30,9 @@ app.post('/register', function (req, res) { // this is for user registration
         console.log(req.body)
         db.users.insert(req.body,  function(err, doc){
       console.log("success");
-      res.json(doc);
-
+       return res.status(200).json({
+        status: 'Registration successful!'
+      });
 
   });
 });
