@@ -28,9 +28,11 @@ app.post('/bankapp', function(req, res){
 
 app.post('/register', function (req, res) { // this is for user registration
         console.log(req.body)
-        db.users.insert(req.body,  function(err, res){
+        db.users.insert(req.body,  function(err, doc){
       console.log("success");
-      console.log(res);
+      res.json(doc);
+
+
   });
 });
 
