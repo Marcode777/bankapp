@@ -27,10 +27,10 @@ app.post('/bankapp', function(req, res){
 })
 
 app.post('/register', function (req, res) { // this is for user registration
-        var email = req.body.name;
-        var password= req.body.email;
-        db.users.insert(email,password,  function(err, req){
-      res.redirect('/register');
+        console.log(req.body)
+        db.users.insert(req.body,  function(err, res){
+      console.log("success");
+      console.log(res);
   });
 });
 
