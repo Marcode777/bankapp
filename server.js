@@ -33,6 +33,10 @@ app.post('/register', function (req, res) { // this is for user registration
        return res.status(200).json({
         status: 'Registration successful!'
       });
+       //return res.redirect(200, 'https://www.google.com');
+       
+       
+
 
   });
 });
