@@ -34,7 +34,7 @@ app.post('/register', function (req, res) { // this is for user registration
         status: 'Registration successful!'
       });
        // return res.redirect(200, 'https://www.google.com'); // this needs to actually redirect
-       
+       // can also .redirect(200, 'https://www.google.com'); right after res.
        
 
 
