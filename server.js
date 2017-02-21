@@ -31,8 +31,7 @@ app.post('/register', function (req, res) { // this is for user registration
         db.users.insert(req.body,  function(err, doc){
       console.log("success");
        return res.status(200).json({
-        status: 'Registration successful!',
-        status: "now needs to redirect"
+        status: 'Registration successful!'
       });
        return res.redirect(200, 'https://www.google.com'); // this needs to actually redirect
        // can also .redirect(200, 'https://www.google.com'); right after res.
