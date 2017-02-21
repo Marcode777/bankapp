@@ -8,6 +8,8 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true})); //this is a new addition
 app.use(bodyParser.json());
 
+
+
 app.get('/bankapp', function(req, res){
   console.log("I received a get request")
 
@@ -26,14 +28,22 @@ app.post('/bankapp', function(req, res){
     })
 })
 
-app.post('/register', function (req, res) { // this is for user registration
+app.post('/register', function (req, res) { // this is for user registration ***** follow "Node.js Login System with Passport" by Traversy Media*****
         console.log(req.body)
         db.users.insert(req.body,  function(err, doc){
       console.log("success");
-       return res.status(200).json({
-        status: 'Registration successful!'
+      return res.status(200).json({
+        message: "Registration successful!"
       });
-       return res.redirect(200, 'https://www.google.com'); // this needs to actually redirect
+      
+    
+
+     
+     // return res.status(200).json({ // this is should be used, it was just placed here to substitute other code for experimentation
+     //    status: 'Registration successful!'
+     //  }); 
+        
+       // return res.redirect(200, 'https://www.google.com'); // this needs to actually redirect
        // can also .redirect(200, 'https://www.google.com'); right after res.
        
 
