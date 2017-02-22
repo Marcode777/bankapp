@@ -34,7 +34,8 @@ app.post('/register', function (req, res) { // this is for user registration ***
       console.log("success");
       return res.status(200).json({
         message: "Registration successful!"
-      });
+      });  
+      // still need to figure out how to redirect or use res.render, watch *****"Node.js Login System with Passport" by Traversy Media*****
       
     
 
