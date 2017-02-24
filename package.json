@@ -1,0 +1,32 @@
+{
+  "name": "bankapp",
+  "version": "1.0.0",
+  "description": "remember to run command, npm install --save first.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcode777/bankapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marcode777/bankapp/issues"
+  },
+  "homepage": "https://github.com/Marcode777/bankapp#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.1",
+    "express-validator": "^3.1.2",
+    "mongoose": "^4.8.4",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0"
+  }
+}
